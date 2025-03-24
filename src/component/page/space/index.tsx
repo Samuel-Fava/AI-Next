@@ -10,28 +10,28 @@ import { GiBrain, GiMoneyStack } from "react-icons/gi"
 const Space = () => {
     const router = useRouter()
     return (
-        <div className="flex-col justify-center">
+        <div className="flex flex-col justify-center">
             <div className="text-white w-full max-w-4xl m-auto">
                 <Header header={"Spaces"} Icon={Sparkle} />
             </div>
 
             <div className='w-full h-[1px] bg-[#303131] '></div>
 
-            <div className="text-white w-full max-w-4xl m-auto p-12">
+            <div className="text-white w-full max-w-4xl m-auto md:p-12 p-2">
                 <span className="text-white font-medium text-lg">My Spaces</span>
-                <div className="mt-8 p-8 bg-gray-600">
-                    <div className="flex justify-between">
-                        <div className="w-1/3 flex flex-col items-center gap-2">
+                <div className="md:mt-8 mt-2 md:p-8 p-2 bg-gray-600">
+                    <div className="flex md:flex-row flex-col  justify-between gap-2">
+                        <div className="md:w-1/3 flex flex-col items-center gap-2">
                             <File className="text-white" />
                             <div className="font-semibold">Upload File</div>
                             <span className="text-center text-gray-400">Upload your documents and Perplexity will answer detailed questions</span>
                         </div>
-                        <div className="w-1/3 flex flex-col items-center gap-2">
+                        <div className="md:w-1/3 flex flex-col items-center gap-2">
                             <AlignLeft className="text-white" />
                             <div className="font-semibold">Set AI Instructions</div>
                             <span className="text-center text-gray-400">Convert complex material into easy-to-understand formats like FAQs or Briefing Docs</span>
                         </div>
-                        <div className="w-1/3 flex flex-col items-center gap-2">
+                        <div className="md:w-1/3 flex flex-col items-center gap-2">
                             <Sparkle className="text-white" />
                             <div className="font-semibold">Collaborate with others</div>
                             <span className="text-center text-gray-400">Add resources to a Space and share it to create a group knowledge base</span>
@@ -43,10 +43,10 @@ const Space = () => {
                 </div>
             </div>
 
-            <div className="text-white w-full max-w-4xl m-auto p-12">
+            <div className="text-white max-w-4xl md:m-auto m-2 md:p-12">
                 <span className="text-white font-medium text-lg">Examples</span>
-                <div className="mt-8 flex gap-2">
-                    <div className="w-1/3 flex flex-col border border-gray-600 rounded-sm p-4 shadow-[2px_2px_0px_0px_#4a5565] hover:shadow-[4px_4px_0px_0px_#4a5565] cursor-pointer">
+                <div className="md:mt-8 mt-2 flex gap-2 md:flex-row flex-col">
+                    <div className="md:w-1/3 flex flex-col border border-gray-600 rounded-sm p-4 shadow-[2px_2px_0px_0px_#4a5565] hover:shadow-[4px_4px_0px_0px_#4a5565] cursor-pointer">
                         <div className="rounded-full bg-gray-600 w-12 p-2">
                             <GiBrain className="w-8 h-auto text-red-300" />
                         </div>
@@ -58,7 +58,7 @@ const Space = () => {
                             <span>Private</span>
                         </div>
                     </div>
-                    <div className="w-1/3 flex flex-col border border-gray-600 rounded-sm p-4 shadow-[2px_2px_0px_0px_#4a5565] hover:shadow-[4px_4px_0px_0px_#4a5565] cursor-pointer">
+                    <div className="md:w-1/3 flex flex-col border border-gray-600 rounded-sm p-4 shadow-[2px_2px_0px_0px_#4a5565] hover:shadow-[4px_4px_0px_0px_#4a5565] cursor-pointer">
                         <div className=" rounded-full bg-gray-600 w-12 p-2">
                             <GiMoneyStack className="w-8 h-auto text-green-300" />
                         </div>
@@ -68,7 +68,7 @@ const Space = () => {
                             <span>21 min.ago</span>
                         </div>
                     </div>
-                    <div className="w-1/3 flex flex-col border border-gray-600 rounded-sm p-4 shadow-[2px_2px_0px_0px_#4a5565] hover:shadow-[4px_4px_0px_0px_#4a5565] cursor-pointer">
+                    <div className="md:w-1/3 flex flex-col border border-gray-600 rounded-sm p-4 shadow-[2px_2px_0px_0px_#4a5565] hover:shadow-[4px_4px_0px_0px_#4a5565] cursor-pointer">
                         <div className=" rounded-full bg-gray-600 w-12 p-2">
                             <FaLaptopCode className="w-8 h-auto text-blue-300" />
                         </div>

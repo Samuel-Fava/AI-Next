@@ -19,7 +19,7 @@ const NotebookUpload = ({ open, setOpen }: NotebookUploadProps) => {
     };
     return (
         <Dialog open={open} onOpenChange={setOpen}>
-            <DialogContent className="px-8 max-w-1/2 bg-gray-700 text-white">
+            <DialogContent className="px-8 max-w-1/2 min-w-fit bg-gray-700 text-white">
                 <div className="flex gap-4 items-center">
                     <LibraryBig className="h-8 w-8" />
                     <h1 className="text-3xl">NotebookLM</h1>

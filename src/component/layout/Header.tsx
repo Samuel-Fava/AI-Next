@@ -1,4 +1,3 @@
-
 interface HeaderProps {
   header : string
   Icon : any

@@ -3,9 +3,12 @@
 import { Atom, Lightbulb, LoaderPinwheel, Shuffle } from "lucide-react";
 import { FaGlobe, FaPaperclip, FaArrowRight } from "react-icons/fa";
 import ComboboxExt from "../../common-component/combobox";
+import { useState } from "react";
 
 
 const ChatText = () => {
+    const [file, setFile] = useState(null);
+
     const onValueChange = () => {
 
     }
@@ -31,6 +34,10 @@ const ChatText = () => {
             description: "In-depth reports on complex topics"
         }
     ]
+
+    const handleFileChange = (e: any) => {
+        setFile(e.target.files[0]);
+    };
     return (
         <div className="relative w-full border border-gray-600 max-w-4xl mb-4 bg-gray-800 rounded-xl block items-center p-4">
             <input
@@ -46,15 +53,21 @@ const ChatText = () => {
                     value="Auto"
                 />
                 <div className="flex">
+
                     <button className="mx-2 text-gray-400 hover:text-white">
                         <FaGlobe />
                     </button>
-                    <button className="mx-2 text-gray-400 hover:text-white">
+
+
+                    <button className="mx-2 text-gray-400 hover:text-white relative">
+                        <input type="file" className="w-6 h-6 cursor-pointer absolute top-1 left-[-5px] opacity-0" onChange={(e) => handleFileChange(e)} />
                         <FaPaperclip />
                     </button>
+
                     <button className="bg-gray-700 p-2 rounded-3xl text-gray-400 hover:bg-gray-600">
                         <FaArrowRight />
                     </button>
+
                 </div>
             </div>
         </div>
