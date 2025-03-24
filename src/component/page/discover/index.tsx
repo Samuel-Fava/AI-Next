@@ -7,7 +7,7 @@ import { GlobeIcon } from '@/component/common/icons';
 const Discover = () => {
   return (
     <div className='flex flex-col'>
-      <div className='mx-20'>
+      <div className='xl:mx-20'>
         <Header header='Discover' Icon={GlobeIcon} />
       </div>
 

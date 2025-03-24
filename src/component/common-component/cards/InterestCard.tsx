@@ -9,7 +9,7 @@ import SignUpButton from '../buttons/SignUpButton';
 
 const InterestCard = () => {
   return (
-    <div className='ml-6 mt-[64px] w-[20rem] rounded-lg bg-[#08676c6d] h-fit p-3'>
+    <div className='lg:ml-6 mt-[64px] w-[20rem] rounded-lg bg-[#08676c6d] h-fit p-3'>
       <div className='flex flex-col gap-2 text-gray-200'>
         <div className='flex flex-row justify-between text-base font-sans items-center font-medium'>
           <p>Make it yours</p>

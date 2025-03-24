@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "./Sidebar"
 
 interface LayoutProps {
@@ -10,15 +10,28 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
     const [collapseSidebar, setCollapseSidebar] = useState(false);
 
+    useEffect(() => {
+        const handleResize = () => {
+            setCollapseSidebar(window.innerWidth < 1024);
+        }
+
+        handleResize()
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
+
     return (
-        <div className='bg-[#202323] w-full flex overflow-hidden'>
+        <div className='bg-[#202323] w-full flex overflow-x-hidden'>
             <div
-                className={`w-[230px] h-screen hidden  ${collapseSidebar ? 'hidden' : 'md:block'
-                    }`}
+                className={`h-screen`}
             >
-                <Sidebar setCollapseSidebar={setCollapseSidebar} />
+                <Sidebar setCollapseSidebar={setCollapseSidebar} collapseSidebar={collapseSidebar} />
             </div>
-            <div className="w-full"> {children}</div>
+            <div className="w-full h-screen"> {children}</div>
         </div>
     )
 }
